@@ -1,10 +1,5 @@
 <script setup>
-import Navbar from './components/Navbar.vue';
-import Hero from './components/Hero.vue'; // Import komponen Profil
-import Education from './components/Education.vue'; // Import komponen Pendidikan
-import Skills from './components/Skills.vue'; // Import komponen Skill
-import Projects from './components/Projects.vue'; // Import komponen Proyek
-import Contact from './components/Contact.vue'; // Import komponen Kontak
+import { RouterView } from 'vue-router'
 
 // Jika Anda memiliki AppFooter terpisah, tambahkan di sini
 // import AppFooter from './components/AppFooter.vue';
@@ -12,12 +7,7 @@ import Contact from './components/Contact.vue'; // Import komponen Kontak
 
 <template>
   <div id="app" class="relative">
-    <Navbar />
-    <main>
-      <Hero />     <Education />
-      <Skills />
-      <Projects />
-      <Contact />     </main>
+    <RouterView />
     </div>
 </template>
 
