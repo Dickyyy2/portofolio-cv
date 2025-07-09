@@ -13,7 +13,7 @@ const filteredEducation = computed(() => educationHistory.value.filter(
 
 onMounted(async () => {
   try {
-    const response = await axios.get('http://localhost:3000/api/education')
+    const response = await axios.get('/api/education')
     console.log('API response:', response.data);
     educationHistory.value = Array.isArray(response.data) ? response.data : [];
   } catch (err) {
