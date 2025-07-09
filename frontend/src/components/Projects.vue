@@ -9,11 +9,11 @@
       <div v-else-if="loading" class="text-gray-300 text-center text-lg">Memuat proyek...</div>
       <div v-else-if="projects.length > 0">
         <div class="bg-gray-800 bg-opacity-70 rounded-xl shadow-xl overflow-hidden mb-12 transform hover:scale-[1.01] transition duration-300 text-left flex flex-col lg:flex-row">
-          <img :src="projects[0].image" :alt="projects[0].title" class="w-full lg:w-2/3 h-80 object-cover object-center cursor-pointer flex-shrink-0" @click="openModal(projects[0].image)">
+          <img :src="projects[0].image" :alt="projects[0].title" class="w-full lg:w-2/3 h-80 object-cover object-center cursor-pointer flex-shrink-0" @click="openModal(projects[0].image)" />
           <div class="p-8 flex flex-col justify-center flex-grow">
             <h3 class="text-4xl font-bold mb-3 text-teal-400">{{ projects[0].title }}</h3>
             <p class="text-xl mb-4 text-gray-300 leading-relaxed">{{ projects[0].description }}</p>
-            <p class="text-base text-gray-400 mb-6">Stack: <span class="font-medium text-white">{{ projects[0].tech.join(', ') }}</span></p>
+            <p class="text-base text-gray-400 mb-6">Stack: <span class="font-medium text-white">{{ Array.isArray(projects[0].tech) ? projects[0].tech.join(', ') : '' }}</span></p>
             <div class="flex space-x-4 mt-auto">
               <button @click="openModal(projects[0].image)" class="bg-teal-600 hover:bg-teal-700 text-white px-5 py-2 rounded-full text-lg transition duration-300">
                 <i class="fas fa-search-plus mr-2"></i>Lihat Gambar Full
@@ -30,11 +30,11 @@
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
           <div v-for="(project, index) in projects.slice(1)" :key="project.title" class="bg-gray-800 bg-opacity-70 rounded-xl shadow-xl overflow-hidden transform hover:scale-[1.02] transition duration-300 text-left">
-            <img :src="project.image" :alt="project.title" class="w-full h-56 object-cover object-center border-b border-gray-700 cursor-pointer" @click="openModal(project.image)">
+            <img :src="project.image" :alt="project.title" class="w-full h-56 object-cover object-center border-b border-gray-700 cursor-pointer" @click="openModal(project.image)" />
             <div class="p-6 flex flex-col h-full">
               <h3 class="text-3xl font-semibold mb-3 text-teal-400">{{ project.title }}</h3>
               <p class="text-lg mb-4 text-gray-300 flex-grow">{{ project.description }}</p>
-              <p class="text-sm text-gray-400 mb-6 mt-auto">Stack: <span class="font-medium text-white">{{ project.tech.join(', ') }}</span></p>
+              <p class="text-sm text-gray-400 mb-6 mt-auto">Stack: <span class="font-medium text-white">{{ Array.isArray(project.tech) ? project.tech.join(', ') : '' }}</span></p>
               <div class="flex space-x-4">
                 <button @click="openModal(project.image)" class="bg-teal-600 hover:bg-teal-700 text-white px-5 py-2 rounded-full text-lg transition duration-300">
                   <i class="fas fa-search-plus mr-2"></i>Lihat Gambar Full

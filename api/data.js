@@ -1,7 +1,7 @@
 // api/data.js
 const educationHistory = [ 
     { id: 1, period: '2023 - Sekarang', institution: 'Universitas Amikom Yogyakarta', major: 'S1 - Informatika' },
-    { id: 2, period: '2020 - 2023', institution: 'SMKN 7 Samarinda', major: 'Rekayasa Perangkat Lunak' } 
+    { id: 2, period: '2019 - 2022', institution: 'MAN 2 Lubuklinggau', major: '' } 
 ];
 
 const skills = [ 
