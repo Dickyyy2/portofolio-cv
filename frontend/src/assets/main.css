@@ -1,14 +1,43 @@
-/* src/assets/main.css */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-/* Style untuk animasi scroll yang akan kita pakai nanti */
-.before-enter {
-opacity: 0;
-transform: translateY(100px);
-transition: all 1s ease-out;
+
+/* Custom global styles for consistency */
+html {
+  scroll-behavior: smooth;
 }
-.enter {
-opacity: 1;
-transform: translateY(0px);
+body {
+  overflow-x: hidden;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9fafb; /* Latar belakang default untuk body */
+  line-height: 1.6;
+  color: #333; /* Default text color */
+}
+
+/* Base styles for sections to ensure proper spacing and alignment */
+section {
+  @apply py-24; /* Memberi padding vertikal default */
+}
+
+/* Custom class for consistent heading styles if not using SectionTitle for all */
+.section-heading {
+  @apply text-5xl md:text-6xl font-extrabold mb-12 text-gray-900 text-center;
+}
+.section-subheading {
+  @apply text-xl md:text-2xl text-gray-700 mb-8 text-center max-w-2xl mx-auto;
+}
+
+/* Optional: Scrollbar styling for a custom look */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #2a2a2a;
+}
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }

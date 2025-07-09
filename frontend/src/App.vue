@@ -1,9 +1,27 @@
+<script setup>
+import Navbar from './components/Navbar.vue';
+import Hero from './components/Hero.vue'; // Import komponen Profil
+import Education from './components/Education.vue'; // Import komponen Pendidikan
+import Skills from './components/Skills.vue'; // Import komponen Skill
+import Projects from './components/Projects.vue'; // Import komponen Proyek
+import Contact from './components/Contact.vue'; // Import komponen Kontak
+
+// Jika Anda memiliki AppFooter terpisah, tambahkan di sini
+// import AppFooter from './components/AppFooter.vue';
+</script>
+
 <template>
-  <div class="min-h-screen bg-gradient-to-br from-blue-100 to-purple-100 font-sans antialiased">
-    <RouterView />
-  </div>
+  <div id="app" class="relative">
+    <Navbar />
+    <main>
+      <Hero />     <Education />
+      <Skills />
+      <Projects />
+      <Contact />     </main>
+    </div>
 </template>
 
-<script setup>
-import { RouterView } from 'vue-router';
-</script>
+<style>
+/* Global styles from src/assets/main.css will apply */
+/* No specific styles needed here for App.vue */
+</style>
