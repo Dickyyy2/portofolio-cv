@@ -31,23 +31,8 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue';
 import SectionTitle from './SectionTitle.vue';
-// Axios tidak lagi diperlukan untuk fungsionalitas mailto:
-// import axios from 'axios';
 
 const bgImage = ref('https://images.unsplash.com/photo-1582236166453-61b6e41b9d10?q=80&w=1920&h=1080&fit=crop&crop=entropy&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
-
-// Variabel form, isSubmitting, submitMessage tidak diperlukan lagi untuk mailto:
-// const form = ref({ name: '', email: '', subject: '', message: '' });
-// const isSubmitting = ref(false);
-// const submitMessage = ref('');
-// const submitMessageType = ref('');
-
-// Fungsi submitForm tidak diperlukan lagi untuk mailto:
-/*
-const submitForm = async () => {
-  // ... (kode submitForm sebelumnya, yang tidak lagi relevan)
-};
-*/
 
 const parallaxEffect = () => {
   const scrolled = window.scrollY;
@@ -84,12 +69,6 @@ onUnmounted(() => {
     transform: translateY(0);
   }
 }
-/* Style untuk tombol saat disabled tidak lagi relevan */
-/*
-button:disabled {
-  opacity: 0.7;
-  cursor: not-allowed;
-}
-*/
+
 </style>
 
